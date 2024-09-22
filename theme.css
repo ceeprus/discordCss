@@ -1,0 +1,503 @@
+@import url(https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css);
+
+:root {
+  --theme-h: 0;
+  --theme-s: 0%;
+  --theme-l: 5%;
+  --primary-500-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 11.9%);
+  --primary-530-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 6.7%);
+  --primary-560-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 2.9%);
+  --primary-600-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 0%);
+  --primary-630-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 2.6%);
+  --primary-645-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 3.7%);
+  --primary-660-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 5.9%);
+  --primary-700-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 8.1%);
+  --primary-730-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 9.6%);
+  --primary-760-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 11.4%);
+  --primary-800-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 13.3%);
+  --primary-830-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 15.7%);
+  --primary-860-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 18.1%);
+  --primary-900-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 19.8%);
+
+  /* color of links */
+  --accent-1: hsl(278, 80%, 60%);
+  /* color of unread dividers and some indicators */
+  --accent-2: hsl(278, 80%, 52%);
+  /* color of accented buttons */
+  --accent-3: hsl(278, 80%, 44%);
+  /* color of accented buttons when hovered */
+  --accent-4: hsl(278, 80%, 36%);
+  /* color of accented buttons when clicked */
+  --accent-5: hsl(278, 80%, 28%);
+  /* color of mentions and messages that mention you */
+  --mention: hsla(278, 80%, 52%, 0.08);
+  /* color of mentions and messages that mention you when hovered */
+  --mention-hover: hsla(278, 80%, 52%, 0.05);
+
+  --brand-experiment: hsl(278, 80%, 52%);
+  --status-danger: var(--accent-2);
+}
+
+/*        ▄██████████████████████████████████████████ 
+        █████████████████████████████████████████████
+       ██████████████████████████████████████████████
+      ████████████████████▀██████████████████████████
+      ██████████ █████████  ▀████████████████████████
+      █████████▀  ████████    ▀██████████████████████
+      █████████   ▀███████   █▄▀▀▀████████████▀▀█████
+      ███████████▄████████          ▄██████████▄ ████
+      ████████▀   █████████      ▄██████████████  ███
+      ▀███████        █████     ██████ ███████   ████
+       ███████▄███▄▄   ████▄   █ ████▀ ███████  █████
+       ▀████████▀ █████ ▀████ █   ▀▀▀ ▀▀██████ ████▀ 
+        ████████▄  ████   ███▄█          █████████▀  
+         ███████▀▄   ▀▀      ▀▄          ████████▀   
+          ████████                       ███████     
+           ███████                       ████ ██     
+            ███▀████                     ████  █     
+             ██ █████                  █████▀▄█      
+                  ███               ▄██▀ ███ █       
+                   ██          ▄▄▄▄▀▀██  ██  █       
+                    █                 ██ █▀  █       
+                    ▀                  █ ▀    █      */
+                    
+/* Shiggy loader */
+.container_e40c16.fixClipping_c7e9c6 > .content_e40c16 {
+  position: relative;
+}
+.container_e40c16.fixClipping_c7e9c6 > .content_e40c16 .ready_e40c16 {
+  display: none;
+}
+.container_e40c16.fixClipping_c7e9c6
+  > .content_e40c16
+  .ready_e40c16
+  + .text_e40c16 {
+  top: 50px;
+}
+.container_e40c16.fixClipping_c7e9c6 > .content_e40c16::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  background: url("https://github.com/ceeprus/discordCss/blob/main/shiggy.gif?raw=true")
+    center/80% no-repeat !important;
+  image-rendering: pixelated;
+}
+
+/* [[ QUOTES ]] */
+[class*="markup_"] blockquote {
+  padding: 4px 10px;
+  background: color-mix(srgb, var(--brand-experiment) 25%, transparent);
+  border-radius: 0 4px 4px 0;
+}
+.theme-dark[class*="markup_"] blockquote {
+  color: var(--brand-experiment);
+  background: var(--brand-experiment);
+}
+.theme-light[class*="markup_"] blockquote {
+  color: var(--brand-experiment);
+}
+[class*="blockquoteDivider_"] {
+  background: var(--brand-experiment);
+}
+
+/* replace ping/strikethrough red */
+.numberBadge_df8943 , /* dm unread number */
+.mention_edf32f /* "NEW" serverlist indicator */ {
+  background: var(--accent-2) !important;
+}
+.divider_c2654d  /* unread dividers */ {
+  --divider-color: var(--accent-2);
+}
+/* .icons_d80634   /* vc channel mute button strikethrough */
+.icon_d80634 /* mute button strikethrough */ {
+  color: var(--accent-2) !important;
+}
+path[fill="var(--status-danger)"] /* vencord game activity strikethrough */ {
+  fill: var(--accent-2) !important;
+}
+
+.theme-dark {
+  --blue-345: var(--accent-1); /* links */
+  --brand-260: var(--accent-2); /* "NEW" channel list indicator */
+  --brand-360: var(--accent-2); /* bot labels, dm button, spotify progressbar */
+  --brand-430: var(--accent-4); /* send button hover */
+  --brand-500: var(--accent-3); /* buttons */
+  --brand-560: var(--accent-4); /* button hovered */
+  --brand-600: var(--accent-5); /* button pressed */
+  --mention-background: var(--mention);
+  --mention-foreground: var(--accent-2);
+  --background-message-highlight: var(--mention);
+  --background-message-highlight-hover: var(--mention-hover);
+}
+.container_cebd1c.checked_cebd1c /* settings checkbuttons */ {
+  background: var(--accent-3) !important;
+}
+
+/* replace ping yellow */
+.theme-dark {
+  --background-mentioned: var(--mention);
+  --background-mentioned-hover: var(--mention-hover);
+}
+.mentioned_d5deea:before /* mention message left edge */ {
+  background: var(--accent-3) !important;
+}
+
+/* replace green */
+.theme-dark {
+  --green-360: var(--accent-2); /* replace other green stuff */
+  --green-430: var(--accent-3); /* green buttons (like invite) */
+  --green-500: var(--accent-4); /* green button hover */
+  --green-530: var(--accent-5); /* green button click */
+  --text-positive: var(--accent-1);
+}
+
+/* Add danger colours to dangerous user actions */
+#user-context-close-dm,
+#user-context-remove-friend,
+#user-context-block {
+  color: var(--accent-2);
+}
+#user-context-close-dm:active,
+#user-context-remove-friend:active,
+#user-context-block:active {
+  background-color: var(--accent-5) !important;
+  color: var(--white-500) !important;
+}
+#user-context-close-dm[class*="focused_"],
+#user-context-remove-friend[class*="focused_"],
+#user-context-block[class*="focused_"] {
+  background-color: var(--accent-5);
+  color: var(--white-500);
+}
+
+/* kick ban timeout  ^^^ */
+.colorDanger_d90b3d {
+  color: var(--accent-2);
+}
+
+div[class*="listItem"]:has(div[aria-label="Download Apps"]),
+.guildSeparator_d0c57e {
+  display: none;
+}
+
+div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
+  display: none;
+}
+
+[class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
+  max-height: 90px;
+}
+
+/* hammin */
+[class^="panels_a4d4d9"]::before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  left: 200px;
+  margin-top: -36px;
+  position: absolute;
+  background-image: url("https://cdn.discordapp.com/emojis/1055070511450828861.gif?size=96&quality=lossless");
+}
+
+/* Rounded Context Menu */
+.menu_d90b3d,
+.colorDefault_d90b3d {
+  border-radius: 15px;
+}
+
+/* edited text */
+.timestamp_f9f2ca:not(.timestampInline_f9f2ca) time::after {
+  content: " (" attr(aria-label) ")";
+}
+.edited_f9f2ca:not(.message-translate-indicator) {
+  display: none;
+}
+
+/* Fav gif icon */
+.imageAccessory_d4597d {
+  left: unset;
+  right: 6px;
+}
+
+/* Message shift-hover */
+[aria-label*="Create Thread"],
+[aria-label*="Forward"],
+[aria-label*="Copy Message ID"] {
+  display: none;
+}
+
+/* Hide some buttons in user context menu */
+#user-context-invite-to-server,
+#user-context-call,
+#user-context-add-friend,
+#user-context-voice-move,
+#user-context-invite-to-listen,
+#guild-context-privacy {
+  display: none;
+}
+
+/* hide the ? on left top */
+[aria-label*='Help'],
+
+/* Text Bar */
+[aria-label*='Open sticker picker'],
+[aria-label*='Send a gift'],
+[class*=channelAppLauncher_] {
+  display: none;
+}
+
+/* image hover */
+[aria-label*="Edit Image with Apps"] {
+  display: none;
+}
+
+#channel-attach-SLASH_COMMAND,
+/* Removes Chatbox from channel that don't allow you to communicate */
+.channelTextAreaDisabled_d0696b,
+/* Removes Follow banner on bottom of channels */
+.wrapper_faf5ab {
+  display: none;
+}
+
+[id="message-tts"],
+[id="message-copy-text"],
+[id="message-apps"],
+[id="message-thread"],
+[id="message-report"] {
+  display: none;
+}
+[href="/store"],
+[aria-label*="Share Nitro with Friends"],
+[href="/shop"] {
+  display: none;
+}
+
+/* show the url masked links take you to in the message */
+.anchor_af404b[title$=")"]::after {
+  font-size: 0.7rem;
+  content: " (" attr(href) ")";
+  filter: grayscale(0.4);
+}
+
+/* Make jump to present/jump to original/mark as read bars smaller and hug the right */
+.barBase_cf58b5 {
+  width: fit-content;
+  margin-left: auto;
+}
+/* End make jump to present/jump to original/mark as read bars smaller and hug the right */
+[class^="form-"]:before,
+[class^="children-"]:after {
+  display: none;
+}
+
+/* set channel status */
+.linkBottom_d8bfb3 {
+  display: none;
+}
+
+/* this ("x in voice" scroll indicator) */
+[class^="bar__"]:has([class^="voiceChannelsIcon__"]) {
+  display: none;
+}
+/* Hide show all voice channels button */
+.voiceChannelsButton_a08117 {
+  display: none;
+}
+
+/* channels and roles tab */
+.container_f1fd9c,
+.header_f1fd9c,
+.scrollerContainer_c6b11b .container_c2efea,
+.theme-dark .scrollerContainer_c6b11b,
+.theme-dark .emptyPage_c6b11b,
+.theme-dark .container_c2efea {
+  background-color: var(--home-background) !important;
+}
+/* remove the funny little gradient on ^ */
+.theme-dark .innerHeader_f1fd9c:after {
+  display: none;
+}
+
+/* Compact experiment server config warning */
+#experiments-tab [class^="description_"] {
+  overflow: hidden;
+}
+#experiments-tab [class^="description_"] div:first-of-type {
+  float: left;
+}
+#experiments-tab [class^="description_"] div + div {
+  font-size: 0;
+  line-height: 0;
+  float: right;
+}
+#experiments-tab [class^="description_"] div + div:after {
+  filter: grayscale();
+  content: "⚠ No server configuration";
+  line-height: 20px;
+  font-size: 14px;
+}
+
+/* Hide invite to server box from channel list */
+.iconItem_f6f816[aria-label="Create Invite"] svg {
+  display: none;
+}
+
+/* Improved dashless channelnames with added selectors, with flag emoji support for platforms that lack them */
+@font-face {
+  font-family: "Twemoji Mozilla";
+  src: url("https://vendicated.github.io/random-files/Twemoji.Mozilla.ttf")
+    format("truetype");
+  unicode-range: U+1F1E6-1F1FF;
+}
+@font-face {
+  font-family: "dashless";
+  size-adjust: 100%; /*adjust this to change word spacing*/
+  src: url("https://vendicated.github.io/random-files/Dashless.woff2")
+    format("woff2");
+  unicode-range: U+002D;
+}
+[data-list-item-id^=channels___]:not([role=button]), /* channel list */
+[class^=titleWrapper] > h1, /* top bar with topic */
+[class^=titleWrapper] > h2, /* top bar in thread view */
+[id^=":r"] > h1, /* topic popup */
+[class^=resultChannel], [class^=channelNameContainer_], [class^=searchAnswer_], /* search */
+.channelWithIcon, /* channel mentions in chat */
+[class^=emptyChannelIcon_] + h3, /* start of new channel */
+[class^=emptyChannelIcon_] ~ [class*=description_],
+[class^=browser_] [class*=channelText_], /* channel browser*/
+[class^=returnButton_] [class^=text-], /*return button in channel browser*/
+[class^=placeholder][class*=slateTextArea], /* chat input placeholder text */
+[class^=auditLog_] [class^=overflowEllipsis_] strong, /* audit log */
+.vc-permviewer-perms-title, /* permissionsviewer */
+[class^=headerChannelContainer_] > div, /* invite to channel dialog */
+[class^=uploadDropModal_] strong, /* file drag upload */
+[class^=channelNameSpan_] /* inbox */ {
+  font-family: "Twemoji Mozilla", "dashless", var(--font-primary);
+}
+
+/*discord loading page*/
+.container_e40c16.fixClipping_c7e9c6 {
+  background: 0 0;
+  backdrop-filter: blur(5px);
+}
+
+/* Automatically resizing gif picker */
+:root {
+  /* Change me! */
+  --expression-picker-aspect-ratio: 1.125 / 1;
+}
+[class*="expressionPickerPositionLayer_"] [class*="positionContainer_"] {
+  height: calc(100vh - 128px);
+}
+[class*="expressionPickerPositionLayer_"] [class*="drawerSizingWrapper_"] {
+  max-height: 100%;
+  bottom: 0px;
+  height: auto;
+  aspect-ratio: var(--expression-picker-aspect-ratio);
+}
+/* Fixes soundmoji picker which has a hardcoded height */
+[class*="expressionPickerPositionLayer_"]
+  [class*="soundboardContainer_"]
+  [class*="picker_"] {
+  height: 100%;
+}
+
+/* Change APP tag to BOT */
+span[class^="botTag"] > span[class^="botText"] {
+  display: none;
+}
+span[class^="botTag"]::after {
+  content: "BOT";
+}
+
+/* Custom Emoji Button */
+.sprite_d91a75.spriteColored_d91a75 {
+  background-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
+  background-size: 24px;
+}
+.sprite_d91a75.spriteGreyscale_d91a75 {
+  mask-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.png?size=128&quality=lossless);
+  mask-size: 24px;
+}
+
+/* context menu hover color */
+.colorDefault_d90b3d.focused_d90b3d {
+  background-color: var(--accent-5);
+}
+
+/* no line clamp on new profiles */
+[class*="descriptionClamp"] {
+  -webkit-line-clamp: unset;
+  max-height: unset;
+}
+[class*="viewFullBio"] {
+  display: none;
+}
+
+/* why would i add you as friend if im already your friend? */
+[class*="biteSize_"] :is([aria-label="Friends"]) {
+  display: none;
+}
+
+/* no more ads in voice channels */
+.wrapper_b9619e {
+  display: none;
+}
+
+/* Change the first path definition of the volume icon SVG to be the moving part of my new animated SVG */
+.containerDefault_f6f816:has([class*="voiceUser_"])
+  .iconContainer_d8bfb3
+  svg.icon_d8bfb3
+  path[d^="M15.16"] {
+  d: path(
+    "M15.1 20.75c-.58.14-1.1-.33-1.1-.92v-.03c0-.5.37-.92.85-1.05a7 7 0 0 0 0-13.5A1.11 1.11 0 0 1 14 4.2v-.03c0-.6.52-1.06 1.1-.92a9 9 0 0 1 0 17.5Z"
+  );
+  animation-name: volume-icon-anim;
+  animation-duration: 1.25s;
+  animation-iteration-count: infinite;
+}
+/* Change the second path definition of the volume icon SVG to be the static part of my new animated SVG */
+.containerDefault_f6f816:has([class*="voiceUser_"])
+  .iconContainer_d8bfb3
+  svg.icon_d8bfb3
+  path[d^="M12"] {
+  d: path(
+    "M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.16 16.51c-.57.28-1.16-.2-1.16-.83v-.14c0-.43.28-.8.63-1.02a3 3 0 0 0 0-5.04c-.35-.23-.63-.6-.63-1.02v-.14c0-.63.59-1.1 1.16-.83a5 5 0 0 1 0 9.02Z"
+  );
+}
+/* change color of animation to match Discord's "Live" icon when someone is live-streaming */
+.containerDefault_f6f816:has([class*="live_"], [class*="baseShapeRound_"])
+  .iconContainer_d8bfb3
+  svg.icon_d8bfb3
+  path[d^="M15.16"] {
+  animation-name: volume-icon-anim-live;
+}
+.containerDefault_f6f816:has([class*="live_"], [class*="baseShapeRound_"])
+  .iconContainer_d8bfb3
+  svg.icon_d8bfb3
+  path[d^="M12"] {
+  color: var(--red-400);
+}
+/* Animation when there is someone in a voice channel */
+@keyframes volume-icon-anim {
+  0%,
+  100% {
+    color: transparent;
+  }
+  50% {
+    color: var(--currentColor);
+  }
+}
+/* Animation when there is someone live-streaming in a voice channel */
+@keyframes volume-icon-anim-live {
+  0%,
+  100% {
+    color: transparent;
+  }
+  50% {
+    color: var(--red-400);
+  }
+}
