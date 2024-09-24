@@ -60,7 +60,7 @@
                    ██          ▄▄▄▄▀▀██  ██  █       
                     █                 ██ █▀  █       
                     ▀                  █ ▀    █      */
-                    
+
 /* Shiggy loader */
 .container_e40c16.fixClipping_c7e9c6 > .content_e40c16 {
   position: relative;
@@ -222,6 +222,11 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
   right: 6px;
 }
 
+/* image maximized forward button */
+.forward_fb6520 {
+  display: none;
+}
+
 /* Message shift-hover */
 [aria-label*="Create Thread"],
 [aria-label*="Forward"],
@@ -235,6 +240,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 #user-context-add-friend,
 #user-context-voice-move,
 #user-context-invite-to-listen,
+#message-forward,
 #guild-context-privacy {
   display: none;
 }
