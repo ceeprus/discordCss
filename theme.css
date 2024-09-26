@@ -507,3 +507,12 @@ span[class^="botTag"]::after {
     color: var(--red-400);
   }
 }
+
+/* Vc right click ui */
+#user-context-note,
+#user-context-secure-frames-user-verification,
+#user-context-verify,
+#user-context-add-friend-nickname,
+#user-context-apps {
+  display: none;
+}
