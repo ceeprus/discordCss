@@ -36,6 +36,8 @@
 
   --brand-experiment: hsl(278, 80%, 52%);
   --status-danger: var(--accent-2);
+  /* Automatically resizing gif picker */
+  --expression-picker-aspect-ratio: 1.125 / 1;
 }
 
 /*        ▄██████████████████████████████████████████ 
@@ -104,35 +106,53 @@
 }
 
 /* replace ping/strikethrough red */
-.numberBadge_df8943 , /* dm unread number */
-.mention_edf32f /* "NEW" serverlist indicator */ {
+.numberBadge_df8943,
+/* dm unread number */
+.mention_edf32f
+
+/* "NEW" serverlist indicator */ {
   background: var(--accent-2) !important;
 }
-.divider_c2654d  /* unread dividers */ {
+
+/* unread dividers */
+.divider_c2654d {
   --divider-color: var(--accent-2);
 }
-/* .icons_d80634   /* vc channel mute button strikethrough */
-.icon_d80634 /* mute button strikethrough */ {
+
+/* mute button strikethrough */
+.icon_d80634 {
   color: var(--accent-2) !important;
 }
-path[fill="var(--status-danger)"] /* vencord game activity strikethrough */ {
+
+path[fill="var(--status-danger)"]
+
+/* vencord game activity strikethrough */ {
   fill: var(--accent-2) !important;
 }
 
 .theme-dark {
-  --blue-345: var(--accent-1); /* links */
-  --brand-260: var(--accent-2); /* "NEW" channel list indicator */
-  --brand-360: var(--accent-2); /* bot labels, dm button, spotify progressbar */
-  --brand-430: var(--accent-4); /* send button hover */
-  --brand-500: var(--accent-3); /* buttons */
-  --brand-560: var(--accent-4); /* button hovered */
-  --brand-600: var(--accent-5); /* button pressed */
+  --blue-345: var(--accent-1);
+  /* links */
+  --brand-260: var(--accent-2);
+  /* "NEW" channel list indicator */
+  --brand-360: var(--accent-2);
+  /* bot labels, dm button, spotify progressbar */
+  --brand-430: var(--accent-4);
+  /* send button hover */
+  --brand-500: var(--accent-3);
+  /* buttons */
+  --brand-560: var(--accent-4);
+  /* button hovered */
+  --brand-600: var(--accent-5);
+  /* button pressed */
   --mention-background: var(--mention);
   --mention-foreground: var(--accent-2);
   --background-message-highlight: var(--mention);
   --background-message-highlight-hover: var(--mention-hover);
 }
-.container_cebd1c.checked_cebd1c /* settings checkbuttons */ {
+
+/* settings checkbuttons */
+.container_cebd1c.checked_cebd1c {
   background: var(--accent-3) !important;
 }
 
@@ -141,16 +161,22 @@ path[fill="var(--status-danger)"] /* vencord game activity strikethrough */ {
   --background-mentioned: var(--mention);
   --background-mentioned-hover: var(--mention-hover);
 }
-.mentioned_d5deea:before /* mention message left edge */ {
+
+/* mention message left edge */
+.mentioned_d5deea:before {
   background: var(--accent-3) !important;
 }
 
 /* replace green */
 .theme-dark {
-  --green-360: var(--accent-2); /* replace other green stuff */
-  --green-430: var(--accent-3); /* green buttons (like invite) */
-  --green-500: var(--accent-4); /* green button hover */
-  --green-530: var(--accent-5); /* green button click */
+  --green-360: var(--accent-2);
+  /* replace other green stuff */
+  --green-430: var(--accent-3);
+  /* green buttons (like invite) */
+  --green-500: var(--accent-4);
+  /* green button hover */
+  --green-530: var(--accent-5);
+  /* green button click */
   --text-positive: var(--accent-1);
 }
 
@@ -275,6 +301,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 [id="message-report"] {
   display: none;
 }
+
 [href="/store"],
 [aria-label*="Share Nitro with Friends"],
 [href="/shop"] {
@@ -293,6 +320,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
   width: fit-content;
   margin-left: auto;
 }
+
 /* End make jump to present/jump to original/mark as read bars smaller and hug the right */
 [class^="form-"]:before,
 [class^="children-"]:after {
@@ -308,6 +336,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 [class^="bar__"]:has([class^="voiceChannelsIcon__"]) {
   display: none;
 }
+
 /* Hide show all voice channels button */
 .voiceChannelsButton_a08117 {
   display: none;
@@ -346,8 +375,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
   font-size: 14px;
 }
 
-/* Hide invite to server box from channel list */
-.iconItem_f6f816[aria-label="Create Invite"] svg {
+[aria-label="Create Invite"] svg {
   display: none;
 }
 
@@ -360,27 +388,47 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 }
 @font-face {
   font-family: "dashless";
-  size-adjust: 100%; /*adjust this to change word spacing*/
+  size-adjust: 100%;
+  /*adjust this to change word spacing*/
   src: url("https://vendicated.github.io/random-files/Dashless.woff2")
     format("woff2");
   unicode-range: U+002D;
 }
-[data-list-item-id^=channels___]:not([role=button]), /* channel list */
-[class^=titleWrapper] > h1, /* top bar with topic */
-[class^=titleWrapper] > h2, /* top bar in thread view */
-[id^=":r"] > h1, /* topic popup */
-[class^=resultChannel], [class^=channelNameContainer_], [class^=searchAnswer_], /* search */
-.channelWithIcon, /* channel mentions in chat */
-[class^=emptyChannelIcon_] + h3, /* start of new channel */
-[class^=emptyChannelIcon_] ~ [class*=description_],
-[class^=browser_] [class*=channelText_], /* channel browser*/
-[class^=returnButton_] [class^=text-], /*return button in channel browser*/
-[class^=placeholder][class*=slateTextArea], /* chat input placeholder text */
-[class^=auditLog_] [class^=overflowEllipsis_] strong, /* audit log */
-.vc-permviewer-perms-title, /* permissionsviewer */
-[class^=headerChannelContainer_] > div, /* invite to channel dialog */
-[class^=uploadDropModal_] strong, /* file drag upload */
-[class^=channelNameSpan_] /* inbox */ {
+
+[data-list-item-id^=channels___]:not([role=button]),
+/* channel list */
+[class^=titleWrapper]>h1,
+/* top bar with topic */
+[class^=titleWrapper]>h2,
+/* top bar in thread view */
+[id^=":r"]>h1,
+/* topic popup */
+[class^=resultChannel],
+[class^=channelNameContainer_],
+[class^=searchAnswer_],
+/* search */
+.channelWithIcon,
+/* channel mentions in chat */
+[class^=emptyChannelIcon_]+h3,
+/* start of new channel */
+[class^=emptyChannelIcon_]~[class*=description_],
+[class^=browser_] [class*=channelText_],
+/* channel browser*/
+[class^=returnButton_] [class^=text-],
+/*return button in channel browser*/
+[class^=placeholder][class*=slateTextArea],
+/* chat input placeholder text */
+[class^=auditLog_] [class^=overflowEllipsis_] strong,
+/* audit log */
+.vc-permviewer-perms-title,
+/* permissionsviewer */
+[class^=headerChannelContainer_]>div,
+/* invite to channel dialog */
+[class^=uploadDropModal_] strong,
+/* file drag upload */
+[class^=channelNameSpan_]
+
+/* inbox */ {
   font-family: "Twemoji Mozilla", "dashless", var(--font-primary);
 }
 
@@ -390,11 +438,6 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
   backdrop-filter: blur(5px);
 }
 
-/* Automatically resizing gif picker */
-:root {
-  /* Change me! */
-  --expression-picker-aspect-ratio: 1.125 / 1;
-}
 [class*="expressionPickerPositionLayer_"] [class*="positionContainer_"] {
   height: calc(100vh - 128px);
 }
@@ -404,6 +447,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
   height: auto;
   aspect-ratio: var(--expression-picker-aspect-ratio);
 }
+
 /* Fixes soundmoji picker which has a hardcoded height */
 [class*="expressionPickerPositionLayer_"]
   [class*="soundboardContainer_"]
@@ -436,6 +480,7 @@ span[class^="botTag"]::after {
 
 /* no line clamp on new profiles */
 [class*="descriptionClamp"] {
+  line-clamp: unset;
   -webkit-line-clamp: unset;
   max-height: unset;
 }
@@ -451,61 +496,6 @@ span[class^="botTag"]::after {
 /* no more ads in voice channels */
 .wrapper_b9619e {
   display: none;
-}
-
-/* Change the first path definition of the volume icon SVG to be the moving part of my new animated SVG */
-.containerDefault_f6f816:has([class*="voiceUser_"])
-  .iconContainer_d8bfb3
-  svg.icon_d8bfb3
-  path[d^="M15.16"] {
-  d: path(
-    "M15.1 20.75c-.58.14-1.1-.33-1.1-.92v-.03c0-.5.37-.92.85-1.05a7 7 0 0 0 0-13.5A1.11 1.11 0 0 1 14 4.2v-.03c0-.6.52-1.06 1.1-.92a9 9 0 0 1 0 17.5Z"
-  );
-  animation-name: volume-icon-anim;
-  animation-duration: 1.25s;
-  animation-iteration-count: infinite;
-}
-/* Change the second path definition of the volume icon SVG to be the static part of my new animated SVG */
-.containerDefault_f6f816:has([class*="voiceUser_"])
-  .iconContainer_d8bfb3
-  svg.icon_d8bfb3
-  path[d^="M12"] {
-  d: path(
-    "M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.16 16.51c-.57.28-1.16-.2-1.16-.83v-.14c0-.43.28-.8.63-1.02a3 3 0 0 0 0-5.04c-.35-.23-.63-.6-.63-1.02v-.14c0-.63.59-1.1 1.16-.83a5 5 0 0 1 0 9.02Z"
-  );
-}
-/* change color of animation to match Discord's "Live" icon when someone is live-streaming */
-.containerDefault_f6f816:has([class*="live_"], [class*="baseShapeRound_"])
-  .iconContainer_d8bfb3
-  svg.icon_d8bfb3
-  path[d^="M15.16"] {
-  animation-name: volume-icon-anim-live;
-}
-.containerDefault_f6f816:has([class*="live_"], [class*="baseShapeRound_"])
-  .iconContainer_d8bfb3
-  svg.icon_d8bfb3
-  path[d^="M12"] {
-  color: var(--red-400);
-}
-/* Animation when there is someone in a voice channel */
-@keyframes volume-icon-anim {
-  0%,
-  100% {
-    color: transparent;
-  }
-  50% {
-    color: var(--currentColor);
-  }
-}
-/* Animation when there is someone live-streaming in a voice channel */
-@keyframes volume-icon-anim-live {
-  0%,
-  100% {
-    color: transparent;
-  }
-  50% {
-    color: var(--red-400);
-  }
 }
 
 /* Vc right click ui */
