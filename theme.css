@@ -67,15 +67,18 @@
 .container_e40c16.fixClipping_c7e9c6 > .content_e40c16 {
   position: relative;
 }
+
 .container_e40c16.fixClipping_c7e9c6 > .content_e40c16 .ready_e40c16 {
   display: none;
 }
+
 .container_e40c16.fixClipping_c7e9c6
   > .content_e40c16
   .ready_e40c16
   + .text_e40c16 {
   top: 50px;
 }
+
 .container_e40c16.fixClipping_c7e9c6 > .content_e40c16::before {
   content: "";
   position: absolute;
@@ -94,13 +97,16 @@
   background: color-mix(srgb, var(--brand-experiment) 25%, transparent);
   border-radius: 0 4px 4px 0;
 }
+
 .theme-dark[class*="markup_"] blockquote {
   color: var(--brand-experiment);
   background: var(--brand-experiment);
 }
+
 .theme-light[class*="markup_"] blockquote {
   color: var(--brand-experiment);
 }
+
 [class*="blockquoteDivider_"] {
   background: var(--brand-experiment);
 }
@@ -186,12 +192,14 @@ path[fill="var(--status-danger)"]
 #user-context-block {
   color: var(--accent-2);
 }
+
 #user-context-close-dm:active,
 #user-context-remove-friend:active,
 #user-context-block:active {
   background-color: var(--accent-5) !important;
   color: var(--white-500) !important;
 }
+
 #user-context-close-dm[class*="focused_"],
 #user-context-remove-friend[class*="focused_"],
 #user-context-block[class*="focused_"] {
@@ -209,7 +217,8 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
   display: none;
 }
 
-div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
+/* Discover */
+.footer_aa1bff {
   display: none;
 }
 
@@ -238,6 +247,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 .timestamp_f9f2ca:not(.timestampInline_f9f2ca) time::after {
   content: " (" attr(aria-label) ")";
 }
+
 .edited_f9f2ca:not(.message-translate-indicator) {
   display: none;
 }
@@ -351,6 +361,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 .theme-dark .container_c2efea {
   background-color: var(--home-background) !important;
 }
+
 /* remove the funny little gradient on ^ */
 .theme-dark .innerHeader_f1fd9c:after {
   display: none;
@@ -360,14 +371,17 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 #experiments-tab [class^="description_"] {
   overflow: hidden;
 }
+
 #experiments-tab [class^="description_"] div:first-of-type {
   float: left;
 }
+
 #experiments-tab [class^="description_"] div + div {
   font-size: 0;
   line-height: 0;
   float: right;
 }
+
 #experiments-tab [class^="description_"] div + div:after {
   filter: grayscale();
   content: "⚠ No server configuration";
@@ -386,6 +400,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
     format("truetype");
   unicode-range: U+1F1E6-1F1FF;
 }
+
 @font-face {
   font-family: "dashless";
   size-adjust: 100%;
@@ -441,6 +456,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 [class*="expressionPickerPositionLayer_"] [class*="positionContainer_"] {
   height: calc(100vh - 128px);
 }
+
 [class*="expressionPickerPositionLayer_"] [class*="drawerSizingWrapper_"] {
   max-height: 100%;
   bottom: 0px;
@@ -459,6 +475,7 @@ div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
 span[class^="botTag"] > span[class^="botText"] {
   display: none;
 }
+
 span[class^="botTag"]::after {
   content: "BOT";
 }
@@ -468,6 +485,7 @@ span[class^="botTag"]::after {
   background-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
   background-size: 24px;
 }
+
 .sprite_d91a75.spriteGreyscale_d91a75 {
   mask-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.png?size=128&quality=lossless);
   mask-size: 24px;
@@ -484,6 +502,7 @@ span[class^="botTag"]::after {
   -webkit-line-clamp: unset;
   max-height: unset;
 }
+
 [class*="viewFullBio"] {
   display: none;
 }
